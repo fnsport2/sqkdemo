@@ -1,0 +1,45 @@
+<div class="container" data-ng-controller="Dashboard" data-ng-init="getActiveGames()">
+	<div class="row">
+		<div class="col-xs-12"><a class="btn btn-lg btn-success btn-block" type="submit"href="#/newgame">New Game</a></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-4"><h4>Active Games</h4></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+	</div>
+            <div data-ng-repeat="game in activegames | filter:({player2:{id:userID}} || {player1:{id:userID}})">
+            <p ng-if="game.player1.id == userID">{{game.player2.id}} {{game.player2.name}}<span ng-show="game.turn==userID"> <b><a href="#/game/{{game.id}}/guess">Your Move</a></b></span><span ng-hide="game.turn==userID"> <b>Waiting</b></span></p>
+            <p ng-if="game.player2.id == userID">{{game.player1.id}} {{game.player1.name}}<span ng-show="game.turn==userID"> <b>Your Move</b></span><span ng-hide="game.turn==userID"> <b>Waiting</b></span></p> 
+                <!--<div class="row" >
+                        <div class="col-md-6" ng-show="game.player1.id == userID"><span><img src="http://placehold.it/100x100" class="img-rounded">{{game.player2.id}} player2  {{game.player2.name}}</span><span class="glyphicon glyphicon-play"></span></div>
+                        <div class="col-md-6" ng-show="game.player2.id == userID"><span><img src="http://placehold.it/100x100" class="img-rounded">{{game.player1.id}} player1 {{game.player1.name}}</span><span class="glyphicon glyphicon-play"></span></div>
+
+                </div>-->
+
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+            </div><!-- end ng repeat -->
+                <!--<div class="row">
+                        <div class="col-md-6"><span><img src="http://placehold.it/140x140" class="img-rounded">FriendC</span></div>
+                        <div class="col-md-6"><span><img src="http://placehold.it/140x140" class="img-rounded">FriendD</span></div>
+                </div>-->
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+	</div>
+                <div class="row">
+                        <div class="col-md-4"><span> Welcome<p>{{user.name}}</p></span></div>
+                        <div class="col-md-4"><span> Total Score<p></p></span></div>
+                        <div class="col-md-4"><p>{{user.points}}</p></div>
+                </div>
+
+    </div> <!-- /container -->

@@ -1,0 +1,21 @@
+<div class="container">
+  <div data-ng-controller="Prompts">
+    <h4> New Game:</h4>
+    <span>
+    {{route.current.template}}
+    <div data-ng-repeat="prompt in prompts">
+      <div class="row">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="" ng-click="creategame(prompt.sound,prompt.points)" >{{prompt.sound}} {{prompt.points}} </a></li>
+          <!--<li><div class="col-xs-8"><button class="btn btn-lg btn-success btn-block" type="warning"><a href="#/login/{{$index}}">{{prompt.sound}} {{prompt.points}} pts</a></button></div></li>-->
+          <!--<li><div class="col-xs-8"><a>{{prompt.sound}} {{prompt.points}} pts</a></div></li>-->
+          <li><div class="col-xs-8"></div></li>
+          <!--<li><a>{{prompt.sound}} </a></li>-->
+          <li><div class="col-md-4"></div></li>
+          <li><div class="col-md-4"></div></li>
+        </ul>
+      </div>
+    </div>
+    </span>
+  </div>
+</div> <!-- /container -->

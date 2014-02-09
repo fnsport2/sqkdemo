@@ -1,0 +1,50 @@
+<div class="container">
+    <div  ng-controller="Guess" ng-init="init()" > 
+        <div ng-hide="answered">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><h4>What is this sound?</h4></div>
+                <div class="col-md-4"></div>
+            </div>
+           <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><audio controls src="{{file_loc}}"> </audio></div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-xs-6 col-md-4">
+                    <form ng-submit="check()">
+                        <span><input type="text"  ng-model="attempt" ><input type="submit" value="Submit"></span>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div ng-show="answered">
+
+            <div class="row" ng-show="correct">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><span> Correct!<p> +{{game_data.prompt.points}}pts</p></span> </audio></div>
+                <div class="col-md-4"><a href="#/newgame/prompt/{{game_data.turn}}" class="btn btn-lg btn-warning btn block"><h3>Next Round</h3></a></div>
+            </div> 
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6"><span ng-hide="correct"><h3> Aww, you were so close.</h3></span></div>
+                <div class="col-md-3"></div>
+            </div> 
+            <br>
+            <br>
+            <div class="row" ng-hide="correct">
+                <div class="col-md-4"></div>
+                <div class="col-xs-6"><span><a href="#/newgame" class="btn btn-lg btn-warning btn block">New Game</a><a href="#/member/{{userID}}">Cancel</a></span></div>
+                <div class="col-md-4"></div>
+            </div> 
+    
+        </div>
+          <!--<li><div class="col-xs-8"><button class="btn btn-lg btn-success btn-block" type="warning">{{prompt.sound}} {{prompt.points}} pts</button></div></li>-->
+          <!-- Felix <li><div class="col-xs-8"><a>{{prompt.sound}} {{prompt.points}} pts</a></div></li>-->
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->

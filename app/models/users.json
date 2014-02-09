@@ -1,0 +1,30 @@
+[{
+	"id": 1,
+	"name": "John Doe",
+	"email": "jdoe@foo.com",
+	"password": "user1",
+	"points": 100,
+	"friends": [2,4]
+},
+{
+	"id": 2,
+	"name": "Tom Space",
+	"email": "tspace@foo.com",
+	"user2": "user2",
+	"points": 75
+},
+{
+	"id": 3,
+	"name": "Ape Kindle",
+	"email": "jdoe@foo.com",
+	"password": "user3",
+	"points": 400
+},
+{
+	"id": 4,
+	"name": "Eddy Patch",
+	"email": "jdoe@foo.com",
+	"password": "user4",
+	"points": 100
+}]
+

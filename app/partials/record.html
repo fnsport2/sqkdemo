@@ -1,0 +1,31 @@
+<div class="container">
+  <div data-ng-controller="Record" data-ng-init="init()"> 
+    <h4> Make the sound of a:</h4>
+    <h5> {{game_data.prompt.value}}</h5>
+    <div>
+      <div class="row">
+      <div class="col-xs-6 col-md-4">
+                                        <div class="btn-group">
+                                                <button type="button" class="btn"><a ng-click="startRecording(this)">Record</a></button>
+                                                <div ng-show="Recordjs.blob"><button type="button" class="btn"><a href="#/login/" ng-click="setrecording()">Submit</a></button>
+                                                <button type="button" class="btn" onclick="document.getElementById('player-preview').play()" value="Play">Play</button></div>
+                                    
+                                        </div>
+                                                <!-- <div id="preview-sound"  ng-show="sound"><audio controls> <source src=""> </audio></button></div> -->
+                                                <div id="preview-sound"  ng-show="Recordjs.blob"><audio id="player-preview" src="{{Recordjs.blob}}"> </audio>
+                                                  <!--<div>
+                                                   <img id="Image-Maps-Com-image-maps-2014-01-29-061431" src="img/button-squak.png" border="0" width="512" height="514" usemap="#image-maps-2014-01-29-061431" alt="" />
+                                                    <map name="image-maps-2014-01-29-061431" id="ImageMapsCom-image-maps-2014-01-29-061431">
+                                                    <area shape="rect" coords="510,512,512,514" alt="Image Map" title="Image Map" href="#" />
+                                                    <area  shape="poly" coords="274,407,265,265,456,266,413,371,317,438,283,448" alt="Rerecord" title=""  onclick=""    />
+                                                    <area  shape="poly" coords="43,263,245,264,246,465,108,414" alt="Play" target=""   onclick="document.getElementById('player-preview').play()"    />
+                                                    <area  shape="poly" coords="49,247,458,246,413,119,251,43,98,110" alt="Submit" title="" target=""  ng-click="setrecording()"    />
+                                                  </div>-->
+                                                </div>
+      </div>
+          <!--<li><div class="col-xs-8"><button class="btn btn-lg btn-success btn-block" type="warning">{{prompt.sound}} {{prompt.points}} pts</button></div></li>-->
+          <!-- Felix <li><div class="col-xs-8"><a>{{prompt.sound}} {{prompt.points}} pts</a></div></li>-->
+      </div>
+    </div>
+  </div>
+</div> <!-- /container -->

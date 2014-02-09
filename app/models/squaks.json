@@ -1,0 +1,30 @@
+{
+	"id": 001,
+	"created": "",
+	"name": "Poodle",
+	"points": 300
+},
+{
+	"id": 002,
+	"created": "",
+	"name": "Propeller",
+	"points": 100
+},
+{
+	"id": 003,
+	"created": "",
+	"name": "Faucet",
+	"points": 350
+},
+{
+	"id": 004,
+	"created": "",
+	"name": "Cow",
+	"points": 50
+},
+{
+	"id": 005,
+	"created": "",
+	"name": "Static",
+	"points": 300
+}

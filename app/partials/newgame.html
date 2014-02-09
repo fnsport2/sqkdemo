@@ -1,0 +1,19 @@
+<div class="container">
+  <div data-ng-controller="NewGame" data-ng-init="getFriends()">
+    <h4> New Game:</h4>
+    <span>
+    {{route.current.template}}
+    <div data-ng-repeat="friend in friends">
+      <div class="row">
+        <ul class="nav nav-pills nav-stacked">
+          <!--<li><div class="col-xs-8"><button class="btn btn-lg btn-success btn-block" type="warning">{{prompt.sound}} {{prompt.points}} pts</button></div></li>-->
+          <!--<li><div class="col-xs-8"><a>{{prompt.sound}} {{prompt.points}} pts</a></div></li>-->
+          <li><a href="#/newgame/prompt/{{friend.id}}">{{friend.name}}</a></li>
+          <li><div class="col-md-4"></div></li>
+          <li><div class="col-md-4"></div></li>
+        </ul>
+      </div>
+    </div>
+    </span>
+  </div>
+</div> <!-- /container -->
