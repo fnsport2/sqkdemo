@@ -18,6 +18,7 @@ angular.module('squak.controllers', ['firebase','squak.services'])
 
 	$scope.$on('angularFireAuth:login',function(){
 		$log.log("Success for login.");
+                $location.path('/member/'+$scope.auth.id);
               
 	});
 
