@@ -3,7 +3,7 @@
     <h4> New Game:</h4>
     <span>
     {{route.current.template}}
-    <div data-ng-repeat="friend in friends">
+    <div data-ng-repeat="friend in friends | filter:friend.id != cu">
       <div class="row">
         <ul class="nav nav-pills nav-stacked">
           <!--<li><div class="col-xs-8"><button class="btn btn-lg btn-success btn-block" type="warning">{{prompt.sound}} {{prompt.points}} pts</button></div></li>-->
