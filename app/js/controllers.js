@@ -11,6 +11,7 @@ angular.module('squak.controllers', ['firebase','squak.services'])
        
        // If the user is logged in take them to dashboard.
        if (!!$scope.auth) {
+              $log.log("User is logged in as id:"+ $scope.auth.id);
               $location.path('/member/'+$scope.auth.id);
               Currentuser.set($scope.auth.id);
             }
@@ -18,6 +19,7 @@ angular.module('squak.controllers', ['firebase','squak.services'])
 
 	$scope.$on('angularFireAuth:login',function(){
 		$log.log("Success for login.");
+                $log.log("User is logged in as id:"+ $scope.auth.id);
                 $location.path('/member/'+$scope.auth.id);
               
 	});
@@ -184,7 +186,8 @@ angular.module('squak.controllers', ['firebase','squak.services'])
             $scope.$apply( function(){
               $log.log("Updating scope");
               $scope.game_data;
-              var url = '/sounds/'+ $scope.game_data.prompt.file;
+              var url = '/app/sounds/'+ $scope.game_data.prompt.file;
+              $log.log("Logging path:"+ url);
               $scope.file_loc = $sce.trustAsResourceUrl(url); });
          });
       }
